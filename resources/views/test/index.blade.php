@@ -35,7 +35,7 @@
                     <td>{{$tache->titre}}</td>
                     <td>{{$tache->created_at}}</td>
                     <td>{{$tache->updated_at}}</td>
-                    <td>{{$tache->status}}</td>
+                    <td>{{$tache->etat}}</td>
                     <td>
                         <a href="{{ route('modifier-une-tache', $tache->id)}}" class="btn btn-primary">Modifier</a>
                         <a type="button" onclick="return confirmRegistre(this)" href="{{ route('supprimer-une-tache', $tache->id)}}" class="btn btn-danger">Supprimer</a>

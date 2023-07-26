@@ -16,7 +16,7 @@ class Tache extends Model
      */
     protected $fillable = [
         'titre',
-        'status',
+        'etat',
     ];
 
 }

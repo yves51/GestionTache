@@ -38,6 +38,7 @@ class TacheController extends Controller
     {
         $validatedData = $request->validate([
             'titre' => 'required|max:255',
+            'etat' => 'required',
         ]);
 
         $tache = Tache::create($validatedData);
@@ -69,6 +70,7 @@ class TacheController extends Controller
     {
         $validatedData = $request->validate([
             'titre' => 'required|max:255',
+            'etat' => 'required',
         ]);
     
         Tache::whereId($id)->update($validatedData);
