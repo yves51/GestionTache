@@ -11,23 +11,25 @@
 <body><br>
    <div class="container" style="text-align: center"><h1>Ajouter une nouvelle tâche </h1></div><br>
     <div class="container" style="position: relative; left:30%">
-        <form action="{{ route('creer-une-tache') }}" method="POST"><br>
+        <form class="row g-3 needs-validation" action="{{ route('creer-une-tache') }}" method="POST">
             @csrf
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
-                    <label>Titre du tâche</label>
-                    <input type="text" name="titre" class="form-control">
-                </div>
-                <div class="col-auto">
-                <label for="status">Statut:</label>
-                <select name="status" id="status" class="form-control">
-                    <option value="en_cours">En cours</option>
-                    <option value="terminee">Terminée</option>
-                </select>
+            <div class="col-md-3">
+              <label for="validationCustom03" class="form-label">Titre</label>
+              <input type="text" name="titre" class="form-control" id="validationCustom03" required>
             </div>
-            </div><br>
-            <button type="submit" name="submit" value="submit" class="btn btn-primary">Ajouter</button>
-        </form>
+            <div class="col-md-3">
+              <label for="validationCustom04" class="form-label">Status</label>
+              <select class="form-select" id="status" name="status">
+                <option value="en cours">En cours</option>
+                <option value="terminee">Terminée</option>
+              </select>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">Ajouter</button>
+            </div>
+          </form>
     </div>
+
+    
 </body>
 </html>
