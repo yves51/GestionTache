@@ -19,8 +19,9 @@
             </div>
             <div class="col-md-3">
               <label for="validationCustom04" class="form-label">Status</label>
-              <select class="form-select" id="status" name="status">
-                <option value="en cours">En cours</option>
+              <select class="form-select" id="" name="etat">
+                <option value="">Choisir</option>
+                <option value="encours">En cours</option>
                 <option value="terminee">Terminée</option>
               </select>
             </div>
